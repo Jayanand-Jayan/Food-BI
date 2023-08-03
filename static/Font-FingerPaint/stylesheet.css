@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Finger Paint';
+    src: url('Font-FingerPaint/FingerPaint-Regular.eot');
+    src: url('Font-FingerPaint/FingerPaint-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Font-FingerPaint/FingerPaint-Regular.woff2') format('woff2'),
+        url('Font-FingerPaint/FingerPaint-Regular.woff') format('woff'),
+        url('Font-FingerPaint/FingerPaint-Regular.ttf') format('truetype'),
+        url('Font-FingerPaint/FingerPaint-Regular.svg#FingerPaint-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Finger Paint';
+    src: url('Font-FingerPaint/FingerPaint-Regular_1.eot');
+    src: url('Font-FingerPaint/FingerPaint-Regular_1.eot?#iefix') format('embedded-opentype'),
+        url('Font-FingerPaint/FingerPaint-Regular_1.woff2') format('woff2'),
+        url('Font-FingerPaint/FingerPaint-Regular_1.woff') format('woff'),
+        url('Font-FingerPaint/FingerPaint-Regular_1.ttf') format('truetype'),
+        url('Font-FingerPaint/FingerPaint-Regular_1.svg#FingerPaint-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

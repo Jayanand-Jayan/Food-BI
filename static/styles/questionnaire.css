@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "FingerPaint";
+
+  src: url("../Font-FingerPaint/Font-FingerPaint/FingerPaint-Regular.woff") format("woff"),
+    url("../Font-FingerPaint/Font-FingerPaint/FingerPaint-Regular.woff2") format("woff2"),
+    url("../Font-FingerPaint/Font-FingerPaint/FingerPaint-Regular.eot?") format("eot"),
+    url("../Font-FingerPaint/Font-FingerPaint/FingerPaint-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alef";
+
+  src: url("../Alef/Alef/Alef-Bold.eot?") format("eot"),
+    url("../Alef/Alef/Alef-Regular.ttf") format("truetype"),
+    url("../Alef/Alef/Alef-Bold.woff") format("woff"),
+    url("../Alef/Alef/Alef-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "ABZ";
+
+  src: url("../ABeeZee/ABeeZee-Regular.ttf") format("truetype");
+}
+
+.container {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: -moz-max-content !important;
+  max-width: max-content !important;
+}
+
+.logoCol {
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.logo {
+  width: 70%;
+}
+
+.row {
+  height: 100%;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-labels {
+  font-family: "ABZ";
+  word-wrap: break-word;
+  display: inline-block;
+  word-break: break-all;
+}
+
+.labels {
+  font-family: "ABZ";
+  font-weight: bold;
+}
+
+.subBtn {
+  justify-self: center;
+}
+
+#name {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: cursive;
+  /* font-size: 10px; */
+  width: 50%;
+  height: 2%;
+} 

@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>FBI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{{ url_for('static', path='/styles/questionnaire.css') }}" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='/images/favicon.ico') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row row-cols-2">
+                <div class="col">
+                    <form class="qForm" method="POST" action="/process" style="margin: 5%;">
+                        <span class="labels">Name</span><br>
+                        <input type="text" id="name" name="name"><br><br>
+                        <span class="labels">Do you accept online orders?</span><br>
+                        <input type="radio" id="onl_ord_yes" name="onl_ord" value="Yes"><span class="labels"> Yes &emsp;</span>
+                        <input type="radio" id="onl_ord_no" name="onl_ord" value="No"><span class="labels"> No</span><br><br>
+                        <span class="labels">Do you allow table booking?</span><br>
+                        <input type="radio" id="tbl_bk_yes" name="tbl_bk" value="Yes"><span class="labels"> Yes &emsp;</span>
+                        <input type="radio" id="tbl_bk_no" name="tbl_bk" value="No"><span class="labels"> No</span><br><br>
+                        <span class="labels">Select your location:</span><br>
+                        <select name="locations" id="locations">
+                            <option value="---">-------</option>
+                            {% for loc in locations %}
+                            <option value= "{{ loc }}">{{ loc }}</option>
+                            {% endfor %}
+                        </select><br><br>
+                        <span class="labels">What type of restaurant do you own?</span><br>
+                        <select name="rests" id="rests">
+                            <option value="---">-------</option>
+                            {% for rest in rest_types %}
+                            <option value= "{{ rest }}">{{ rest }}</option>
+                            {% endfor %}
+                        </select><br><br>
+                        <div class="row-cols-8" data-control="checkbox-dropdown">
+                            <span class="labels">Select the type of cuisines you offer:</span>
+                            <div class="dropdown-list">
+                                {% for c in cuisines%}
+                                    <span class="dropdown-labels">
+                                        <input type="checkbox" name="dropdown_group" value="{{ c }}"/> {{ c }} 
+                                    </span>
+                                {% endfor %}
+                            </div>
+                        </div><br>
+                        <span class="labels">What would be the approximate cost for two people at your restaurant?</span><br>
+                        <input type="range" id="cost" min="0" max="7000" step="50" class="form-range" value="0" name="cost" onchange="handlePriceChange()"><br>
+                        <span class="labels" id="priceVal">Rs. 0</span><br><br>
+                        <span class="labels">What type of restaurant would you classify yourself as?</span><br>
+                        <select name="listed_in" id="listed_in">
+                            <option value="---">-------</option>
+                            {% for l in listed_in %}
+                            <option value= "{{ l }}">{{ l }}</option>
+                            {% endfor %}
+                        </select><br><br>
+                        <button type="submit" class="btn btn-outline-primary subBtn">Submit</button>
+                    </form>
+                </div>
+                
+            <div class="col logoCol">
+                <img src="{{ url_for('static', path='/images/FoodBI.png') }}" class="logo" alt="Logo" style="position: sticky;">
+            </div>
+            </div>
+        </div>
+        
+        <script>
+            function handlePriceChange() {
+                let currPrice = parseInt(document.getElementById("cost").value);
+                document.getElementById("priceVal").innerText = "Rs. " +currPrice;
+            }
+        </script>
+    </body>
+</html>

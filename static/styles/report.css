@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "FingerPaint";
+    src: url("../Font-FingerPaint/Font-FingerPaint/FingerPaint-Regular.woff") format("woff"),
+    url("../Font-FingerPaint/Font-FingerPaint/FingerPaint-Regular.woff2") format("woff2"),
+    url("../Font-FingerPaint/Font-FingerPaint/FingerPaint-Regular.eot?") format("eot"),
+    url("../Font-FingerPaint/Font-FingerPaint/FingerPaint-Regular.ttf") format("truetype");
+    }
+
+@font-face {
+    font-family: "Alef";
+    src: url("../Alef/Alef/Alef-Bold.eot?") format("eot"),
+    url("../Alef/Alef/Alef-Regular.ttf") format("truetype"),
+    url("../Alef/Alef/Alef-Bold.woff") format("woff"),
+    url("../Alef/Alef/Alef-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "ABZ";
+    src: url("../ABeeZee/ABeeZee-Regular.ttf") format("truetype");
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+h1 {
+    font-family: "Alef";
+}
+
+iframe, img {
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
+.container {
+    width: 90%;
+    margin-left: 5%;
+    padding: 10px;
+}
+
+.annotations_onlord {
+    display: block;
+    font-family: "ABZ";
+    float: left;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.onl_ord {
+    border-radius: 20px;
+    height: 50%;
+    /* float: left; */
+}
+
+.onl_ord, .annotations_onlord {
+    width: 45%;
+}
+
+.cost_rate {
+    border-radius: 20px;
+    float: right;
+    height: 50%;
+}
+
+.annotations_costrate {
+    display: inline;
+    font-family: "ABZ";
+    float: right;
+    /* text-align: right; */
+    margin-top: 10px;
+}
+
+.cost_rate, .annotations_costrate, .cuisine_count {
+    width: 50%;
+}
+
+.cuisine_count {
+    border-radius: 20px;
+    float: right;
+    height: 50%;
+}
+
+.vote_count {
+    border-radius: 20px;
+    width: 45%;
+    height: 70%;
+}
+
+.wordcloud {
+    width: 45%; 
+    height: 70%; 
+    margin-left: 40px; 
+    border-radius: 20px;
+}
